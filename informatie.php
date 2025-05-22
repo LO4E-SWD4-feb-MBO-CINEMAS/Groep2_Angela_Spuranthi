@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    
+    <header>
+
+    </header>
+
+    <main>
+    <article class="bovenkant">
+        <h1 class="informatie_titel">Informatie</h1>
+    </article>
+    </main>
+
+    <footer>
+    </footer>
 </body>
 </html>
