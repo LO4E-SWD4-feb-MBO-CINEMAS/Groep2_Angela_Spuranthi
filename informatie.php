@@ -17,6 +17,18 @@
     <article class="bovenkant">
         <h1 class="informatie_titel">Informatie</h1>
     </article>
+
+    <section class="info_1">
+        <article class="contactgegevens">
+        </article>
+        <article class="misc">
+            <article class="openingstijden">
+            </article>
+            <article class="extra_info"></article>
+        </article>
+    </section>
+        
+
     </main>
 
     <footer>

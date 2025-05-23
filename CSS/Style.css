@@ -96,4 +96,51 @@ footer {
         font-size: 2rem;
         padding: 10px 20px;
     }
+    .info_1 {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 20px; 
+    }
+    
+    .contactgegevens{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 70vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .openingstijden{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 30vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .extra_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 40vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .misc {
+        display: flex;
+        flex-direction: column; /* Zodat de children onder elkaar komen */
+        justify-content: space-between;
+        width: 60%; /* Zorg dat het naast contactgegevens past */
+    }
+    
 }
