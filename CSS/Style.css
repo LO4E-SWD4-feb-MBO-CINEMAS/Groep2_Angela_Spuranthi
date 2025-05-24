@@ -2,11 +2,69 @@
 
 *{
     background-color: #ffbb00;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Asap Condensed", sans-serif;
+
 }
 
-/* header {
-    padding: 10px;
-} */
+.header_2 {
+    width: 100%;
+    background-color: black;
+    color: #ffbb00; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.menu {
+    background-color: #000;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header_2 img{
+    width: 100px;
+    background-color: #000;
+}
+
+.header_2 h1{
+    font-size: 40px;
+}
+
+.menu li {
+    background-color: #000;
+    list-style: none;
+}
+
+.menu a {
+    background-color: #000;
+    color: #ffdd76; 
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover{
+    color: #ffbb00;
+}
+
+.menu i{
+    background-color: #000;
+    font-size: 40px;
+}
+
+.header_2 > i{
+    /* background-color: #000; */
+    color: #ffbb00;
+    transition: color 0.3s ease;
+}
+
+.header_2 > i:hover{
+    color: #ffdd76;
+}
 
 .logo {
     height: 60px;
@@ -138,9 +196,9 @@ footer {
     }
     .misc {
         display: flex;
-        flex-direction: column; /* Zodat de children onder elkaar komen */
+        flex-direction: column; 
         justify-content: space-between;
-        width: 60%; /* Zorg dat het naast contactgegevens past */
+        width: 60%; 
     }
     
 }
