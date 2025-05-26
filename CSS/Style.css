@@ -432,3 +432,19 @@ footer {
     }
     
 }
+
+/* FILMS PAGINA */
+
+.films-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; 
+    text-align: center;
+}
+
+.films-section h1 {
+    font-size: 3rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+}

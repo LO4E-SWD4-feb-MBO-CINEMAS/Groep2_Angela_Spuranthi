@@ -10,7 +10,21 @@
 </head>
 <body>
   
-    <?php include 'header.php'; ?>
+    <?php include 'header2.php'; ?>
+
+
+    <article class="films-section">
+        <h1>FILMS</h1>
+    </article>
+
+
+
+
+
+
+
+
+
     <?php include 'footer.php'; ?>
 
 </body>
