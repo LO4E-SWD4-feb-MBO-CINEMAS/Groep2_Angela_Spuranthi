@@ -1,3 +1,3 @@
 <footer>
-    <p>&copy; 2025 MBO Cinema. Alle rechten voorbehouden.</p>
+    <p>&copy; 2025 MBO Cinema.</p>
 </footer>
