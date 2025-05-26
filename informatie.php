@@ -20,6 +20,7 @@
 
     <section class="info_1">
         <article class="contactgegevens">
+            <!-- <h1>contactgegevens:</h1> -->
         </article>
         <article class="misc">
             <article class="openingstijden">

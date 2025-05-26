@@ -9,67 +9,6 @@
 
 }
 
-.header_2 {
-    width: 100%;
-    background-color: black;
-    color: #ffbb00; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-.menu {
-    background-color: #000;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.header_2 img{
-    width: 100px;
-    background-color: #000;
-}
-
-.header_2 h1{
-    font-size: 40px;
-}
-
-.menu li {
-    background-color: #000;
-    list-style: none;
-}
-
-.menu a {
-    background-color: #000;
-    color: #ffdd76; 
-    text-decoration: none;
-    font-size: 22px;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover{
-    color: #ffbb00;
-}
-
-.menu i{
-    background-color: #000;
-    font-size: 40px;
-}
-
-.header_2 > i{
-    /* background-color: #000; */
-    color: #ffbb00;
-    transition: color 0.3s ease;
-}
-
-.header_2 > i:hover{
-    color: #ffdd76;
-}
-
-.logo {
-    height: 60px;
-    display: block;
-}
 
 footer {
     background-color: #f2f2f2;
@@ -84,6 +23,68 @@ footer {
     body {
         margin: 0;
     }
+    .header_2 {
+        width: 100%;
+        background-color: black;
+        color: #ffbb00; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    .menu {
+        background-color: #000;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .header_2 img{
+        width: 100px;
+        background-color: #000;
+    }
+    
+    .header_2 h1{
+        font-size: 40px;
+    }
+    
+    .menu li {
+        background-color: #000;
+        list-style: none;
+    }
+    
+    .menu a {
+        background-color: #000;
+        color: #ffdd76; 
+        text-decoration: none;
+        font-size: 22px;
+        transition: color 0.3s ease;
+    }
+    
+    .menu a:hover{
+        color: #ffbb00;
+    }
+    
+    .menu i{
+        background-color: #000;
+        font-size: 40px;
+    }
+    
+    .header_2 > i{
+        /* background-color: #000; */
+        color: #ffbb00;
+        transition: color 0.3s ease;
+    }
+    
+    .header_2 > i:hover{
+        color: #ffdd76;
+    }
+    
+    .logo {
+        height: 60px;
+        display: block;
+    }
+
     .bovenkant {
         border: 2px solid #ffd413;
         border-radius: 20px;
@@ -104,10 +105,129 @@ footer {
         font-size: 2rem;
         padding: 10px 20px;
     }
+
+    .info_1 {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .contactgegevens,
+    .openingstijden,
+    .extra_info {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .misc {
+        width: 100%;
+    }
+    
+    .contactgegevens{
+        display: flex;
+        /* flex-direction: row; */
+        justify-content: flex-start;
+        height: 70vh;
+        width: 70%;
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .openingstijden{
+        display: flex;
+        /* flex-direction: row;
+        justify-content: flex-end; */
+        height: 30vh;
+        width: 70%;
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .extra_info{
+        display: flex;
+        /* flex-direction: row;
+        justify-content: flex-end; */
+        height: 40vh;
+        width: 90%;
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .misc {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        width: 60%; 
+    }
 }
 @media screen and (min-width: 769px) and (max-width: 1279px) {
     body {
         margin: 0;
+    }
+
+    .header_2 {
+        width: 100%;
+        background-color: black;
+        color: #ffbb00; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    .menu {
+        background-color: #000;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .header_2 img{
+        width: 100px;
+        background-color: #000;
+    }
+    
+    .header_2 h1{
+        font-size: 40px;
+    }
+    
+    .menu li {
+        background-color: #000;
+        list-style: none;
+    }
+    
+    .menu a {
+        background-color: #000;
+        color: #ffdd76; 
+        text-decoration: none;
+        font-size: 22px;
+        transition: color 0.3s ease;
+    }
+    
+    .menu a:hover{
+        color: #ffbb00;
+    }
+    
+    .menu i{
+        background-color: #000;
+        font-size: 40px;
+    }
+    
+    .header_2 > i{
+        /* background-color: #000; */
+        color: #ffbb00;
+        transition: color 0.3s ease;
+    }
+    
+    .header_2 > i:hover{
+        color: #ffdd76;
+    }
+    
+    .logo {
+        height: 60px;
+        display: block;
     }
     .bovenkant {
         border: 2px solid #ffd413;
@@ -129,11 +249,121 @@ footer {
         font-size: 2rem;
         padding: 10px 20px;
     }
+    
+    .info_1 {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 20px; 
+    }
+    
+    .contactgegevens{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 70vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .openingstijden{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 30vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .extra_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 40vh;
+        width: 40%;
+        /* margin-left: 1rem; */
+        background-color: #ffd413;
+        border: 2px solid #ffdd76;
+        border-radius: 20px;
+    }
+    .misc {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        width: 60%; 
+    }
 }
+
 @media screen and (min-width: 1280px) {
     body {
         margin: 0;
     }
+    .header_2 {
+        width: 100%;
+        background-color: black;
+        color: #ffbb00; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+    .menu {
+        background-color: #000;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    
+    .header_2 img{
+        width: 100px;
+        background-color: #000;
+    }
+    
+    .header_2 h1{
+        font-size: 40px;
+    }
+    
+    .menu li {
+        background-color: #000;
+        list-style: none;
+    }
+    
+    .menu a {
+        background-color: #000;
+        color: #ffdd76; 
+        text-decoration: none;
+        font-size: 22px;
+        transition: color 0.3s ease;
+    }
+    
+    .menu a:hover{
+        color: #ffbb00;
+    }
+    
+    .menu i{
+        background-color: #000;
+        font-size: 40px;
+    }
+    
+    .header_2 > i{
+        /* background-color: #000; */
+        color: #ffbb00;
+        transition: color 0.3s ease;
+    }
+    
+    .header_2 > i:hover{
+        color: #ffdd76;
+    }
+    
+    .logo {
+        height: 60px;
+        display: block;
+    }
+
     .bovenkant {
         border: 2px solid #ffd413;
         border-radius: 20px;
