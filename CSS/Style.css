@@ -422,7 +422,7 @@ footer {
         flex-direction: row;
         justify-content: flex-start;
         height: 70vh;
-        width: 40%;
+        width: 40%; 
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
@@ -431,8 +431,9 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        height: 30vh;
-        width: 40%;
+        height: 25vh;
+        width: 60%;
+        margin-bottom: 20px;
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
@@ -442,7 +443,7 @@ footer {
         flex-direction: row;
         justify-content: flex-end;
         height: 40vh;
-        width: 40%;
+        width: 60%;
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
