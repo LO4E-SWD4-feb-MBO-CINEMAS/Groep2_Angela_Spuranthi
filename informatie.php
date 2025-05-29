@@ -23,8 +23,7 @@
             <!-- <h1>contactgegevens:</h1> -->
         </article>
         <article class="misc">
-            <article class="openingstijden">
-            </article>
+            <article class="openingstijden"></article>
             <article class="extra_info"></article>
         </article>
     </section>
