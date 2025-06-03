@@ -9,18 +9,21 @@
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    <article class="nav">
-        <img class="logo" src="Images/MBO-cinema-logo.png" alt="logo mbo cinema's">
+<header class="header_2">
+    <img class="logo_img" src="Images/MBO-cinema-logo.png" alt="logo mbo cinema's"> 
+    <ul class="menu" id="mobileMenu">
+        <li><a href="#">Films</a></li>
+        <li><a href="#">Bioscopen</a></li>
+        <li><a href="informatie.php">Informatie</a></li>
+        <li><a href="inloggen.php"><i class='bx bx-user-circle'></i></a></li>
+        <li><a href="edit.php">Verander profiel</a></li>
+        <li><a href="logout.php"> <button class="btn">Log uit</button> </a></li>
+     </ul>
+</header>
 
-        <article class="right-links">
-            <a href="#">Verander profiel</a>
-            <a href="logout.php"> <button class="btn">Log uit</button> </a>
-        </article>
-
-    </article>
-
+<main>
     <article class="container">
-      <article class="box form-box">
+        <article class="box form-box">
         <p>Verander profiel</p>
         <form action="" method="post">
             <article class="field input">
@@ -42,8 +45,15 @@
                 <input type="submit" class="btn" name="submit" value="Update" required>
             </article>
         </form>
-      </article>  
+        </article>  
     </article>
+</main>
+
+<footer>
+    <?php
+    include("footer.php");
+    ?>
+</footer>
 
 </body>
 </html>

@@ -660,15 +660,21 @@ footer {
         border: 2px solid #ffdd76;
         border-radius: 20px;
     }
-    .extra_info{
+    .extra_info {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        flex-direction: column; 
+        align-items: center;     
         height: 40vh;
         width: 60%;
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
+    }
+    
+    .extra_info h1 {
+        margin-top: 1rem;        
+        background-color: #ffd413;
+        font-size: 22px;
     }
     .misc {
         display: flex;
@@ -708,7 +714,6 @@ footer {
     .form-box form .field{
         display: flex;
         flex-direction: column;
-        /* margin-bottom: 10px; */
         padding-bottom: 10px;
         background-color: #ffdd76;
     }
@@ -769,28 +774,46 @@ footer {
         background-color: #000;
         padding: 0 10px;
     }
-    .main_medewerkers{
+    .main_medewerkers {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         margin-top: 60px;
+        width: 100%;
     }
-    .main-box{
+    
+    .main-box {
         display: flex;
         flex-direction: column;
         width: 70%;
     }
-    .main-box .top{
+    
+    .main-box .top {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
     }
-    .bottom{
+    
+    .bottom {
         width: 100%;
         margin-top: 20px;
     }
     
-    .box p, .box b{
+    .profiel-box {
+        background-color: #ffdd76;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        height: 10vh;
+        flex: 1;
+        min-width: 250px;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .profiel-box p, .profiel-box b, .bottom p, .bottom b{
         background-color: #ffdd76;
     }
 }
