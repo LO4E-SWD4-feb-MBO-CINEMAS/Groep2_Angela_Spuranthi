@@ -12,17 +12,39 @@
 
 footer {
     background-color: #f2f2f2;
-    /* padding: 15px; */
     text-align: center;
     font-size: 14px;
     color: #333;
-    margin-top: 500px;
+    /* margin-top: 500px; */
+
 }
 
 @media screen and (max-width: 768px) {
     body {
         margin: 0;
     }
+    
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        color: #ffdd76;
+        cursor: pointer;
+        background-color: black;
+        margin-left: auto;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+
     .header_2 {
         width: 100%;
         background-color: black;
@@ -79,7 +101,9 @@ footer {
     .header_2 > i:hover{
         color: #ffdd76;
     }
-    
+    .logo_img{
+        display: none;
+    }
     .logo {
         height: 60px;
         display: block;
@@ -107,28 +131,27 @@ footer {
     }
 
     .info_1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 2rem;
+    }
+        
+    .misc {
+        display: flex;
         flex-direction: column;
         gap: 20px;
-        align-items: center;
-    }
-
-    .contactgegevens,
-    .openingstijden,
-    .extra_info {
-        width: 90%;
-        height: auto;
-        flex-direction: column;
-        padding: 1rem;
-        align-items: flex-start;
-    }
-
-    .misc {
-        width: 100%;
+        flex: 1 1 300px;
     }
     
     .contactgegevens{
+        padding: 1rem;
+        min-width: 300px;
+        max-width: 400px;
+        height: auto;
         display: flex;
-        /* flex-direction: row; */
         justify-content: flex-start;
         height: 70vh;
         width: 70%;
@@ -138,8 +161,6 @@ footer {
     }
     .openingstijden{
         display: flex;
-        /* flex-direction: row;
-        justify-content: flex-end; */
         height: 30vh;
         width: 115%;
         background-color: #ffd413;
@@ -148,8 +169,6 @@ footer {
     }
     .extra_info{
         display: flex;
-        /* flex-direction: row;
-        justify-content: flex-end; */
         height: 40vh;
         width: 115%;
         background-color: #ffd413;
@@ -162,6 +181,114 @@ footer {
         justify-content: space-between;
         width: 60%; 
     }
+        /* Inloggen medewerkers LMFAO */
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+        .box{
+            background-color: #ffdd76;
+            display: flex;
+            flex-direction: column;
+            padding: 25px 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                        0 32px 64px -48px rgba(0, 0, 0, 0.9);
+        }
+        .form-box{
+            width: 550px;
+            margin: 0 10px;
+        }
+        .form-box p{
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+            margin-bottom: 10px;
+            background-color: #ffdd76;
+        }
+        .form-box form .field{
+            display: flex;
+            flex-direction: column;
+            /* margin-bottom: 10px; */
+            padding-bottom: 10px;
+            background-color: #ffdd76;
+        }
+        .form-box form .input input{
+            height: 40px;
+            width: 100%;
+            font-size: 17px;
+            padding: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            outline: none;
+            background: #ffdeb4;
+        }
+        .form-box form .field label {
+            background-color: #ffdd76;
+        }
+        .btn{
+            height: 35px;
+            background: #ffaf68;
+            border: 1px solid #000;
+            border-radius: 5px;
+            color: #000;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all .5s;
+            margin-top: 10px;
+            padding: 0px 10px;
+        }
+        .btn:hover{
+            opacity: 0.82;
+        }
+        .submit{
+            width: 100%;
+        }
+        .links{
+            background-color: #ffdd76;
+        }
+        .links a{
+            background-color: #ffdd76;
+        }
+        .main-box .top{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        .top .box{
+            margin: 10px 10px;
+        }
+        .bottom{
+            margin-top: 0;
+        }
+        .box p{
+            background-color: #ffdd76;
+        }
+        .box b{
+            background-color: #ffdd76;
+        }
+        .nav{
+            background: #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            line-height: 60px;
+            z-index: 100;
+        }
+        .logo{
+            background: #000;
+        }
+        .right-links{
+            background-color: #000;
+        }
+        .right-links a{
+            background-color: #000;
+            padding: 0 10px;
+        }
 }
 @media screen and (min-width: 769px) and (max-width: 1279px) {
     body {
@@ -216,7 +343,6 @@ footer {
     }
     
     .header_2 > i{
-        /* background-color: #000; */
         color: #ffbb00;
         transition: color 0.3s ease;
     }
@@ -233,7 +359,7 @@ footer {
         border: 2px solid #ffd413;
         border-radius: 20px;
         background-color: #ffd413;
-        width: 40%;
+        width: 30%;
         margin: 20px auto;
         display: flex;
         justify-content: center;
@@ -263,7 +389,6 @@ footer {
         justify-content: flex-start;
         height: 70vh;
         width: 40%;
-        /* margin-left: 1rem; */
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
@@ -274,7 +399,6 @@ footer {
         justify-content: flex-end;
         height: 30vh;
         width: 40%;
-        /* margin-left: 1rem; */
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
@@ -285,7 +409,6 @@ footer {
         justify-content: flex-end;
         height: 40vh;
         width: 40%;
-        /* margin-left: 1rem; */
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
@@ -296,12 +419,135 @@ footer {
         justify-content: space-between;
         width: 60%; 
     }
+
+    /* Inloggen medewerkers LMFAO */
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+    }
+    .box{
+        background-color: #ffdd76;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                    0 32px 64px -48px rgba(0, 0, 0, 0.9);
+    }
+    .form-box{
+        width: 550px;
+        margin: 0 10px;
+    }
+    .form-box p{
+        font-size: 30px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+        margin-bottom: 10px;
+        background-color: #ffdd76;
+    }
+    .form-box form .field{
+        display: flex;
+        flex-direction: column;
+        /* margin-bottom: 10px; */
+        padding-bottom: 10px;
+        background-color: #ffdd76;
+    }
+    .form-box form .input input{
+        height: 40px;
+        width: 100%;
+        font-size: 17px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        outline: none;
+        background: #ffdeb4;
+    }
+    .form-box form .field label {
+        background-color: #ffdd76;
+    }
+    .btn{
+        height: 35px;
+        background: #ffaf68;
+        border: 1px solid #000;
+        border-radius: 5px;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all .5s;
+        margin-top: 10px;
+        padding: 0px 10px;
+    }
+    .btn:hover{
+        opacity: 0.82;
+    }
+    .submit{
+        width: 100%;
+    }
+    .links{
+        background-color: #ffdd76;
+    }
+    .links a{
+        background-color: #ffdd76;
+    }
+    
+    /* home pagina voor medewerkers */
+
+    .nav{
+        background: #000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        line-height: 60px;
+        z-index: 100;
+    }
+    .logo{
+        background: #000;
+    }
+    .right-links{
+        background-color: #000;
+    }
+    .right-links a{
+        background-color: #000;
+        padding: 0 10px;
+    }
+    .main_medewerkers{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .main-box{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    .main-box .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .bottom{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .box p{
+        background-color: #ffdd76;
+    }
+    .box b{
+        background-color: #ffdd76;
+    }
 }
 
 @media screen and (min-width: 1280px) {
+    /* algemeen voor elke pagina */
     body {
         margin: 0;
     }
+    /* header2 */
     .header_2 {
         width: 100%;
         background-color: black;
@@ -350,7 +596,6 @@ footer {
     }
     
     .header_2 > i{
-        /* background-color: #000; */
         color: #ffbb00;
         transition: color 0.3s ease;
     }
@@ -363,7 +608,7 @@ footer {
         height: 60px;
         display: block;
     }
-
+    /* INFORMATIE PAGINA XD*/
     .bovenkant {
         border: 2px solid #ffd413;
         border-radius: 20px;
@@ -384,45 +629,113 @@ footer {
         font-size: 2rem;
         padding: 10px 20px;
     }
+    
     .info_1 {
         display: flex;
         flex-direction: row; 
         justify-content: space-between;
         gap: 20px; 
+        margin-left: 16rem;
+        margin-bottom: 1rem;
     }
-    
+   
     .contactgegevens{
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column; 
+        align-items: center;   
         height: 70vh;
-        width: 40%;
-        /* margin-left: 1rem; */
+        width: 40%; 
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
     }
+    .contactgegevens >  p {
+        margin-top: 1rem;        
+        background-color: #ffd413;
+        font-size: 16px;
+    }
+    .contactgegevens > h1{
+        margin-top: 1rem;        
+        background-color: #ffd413;
+        font-size: 22px;
+    }
+    .contactgegevens >  p > b{ 
+        background-color: #ffd413;
+    }
+    /* socials media knoppen die ik perongelijk in een classe openingstijden heb gezet */
     .openingstijden{
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        height: 30vh;
-        width: 40%;
-        /* margin-left: 1rem; */
+        height: 25vh;
+        width: 60%;
+        margin-bottom: 20px;
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
     }
-    .extra_info{
+    .openingstijden > .social-buttons > a{
+        background-color: #ffd413;
+        color: #ffaf68;
+    }
+    .social-buttons{
+        margin-right: 20px;
+        width: 400px;
+        background-color: #ffd413;
         display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-buttons button{
+        border: none; 
+        outline: none;
+        cursor: pointer;
+        width: 100px;
+        color: #000;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all .25s ease;
+    }
+    .social-buttons button:active{
+        transform: scale(.85);
+    }
+    .social-buttons button .bg{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #ffaf68;
+        border-radius: 25px;
+        pointer-events: none;
+        box-shadow: 0 0 30px #f38f38;
+    }
+    .social-buttons button i{
+        background-color: #ffaf68;
+        position: relative;
+        z-index: 10;
+        font-size: 28px;
+        pointer-events: none;
+    }
+
+    /* de echte openingstijden */
+    .extra_info {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;     
         height: 40vh;
-        width: 40%;
-        /* margin-left: 1rem; */
+        width: 60%;
         background-color: #ffd413;
         border: 2px solid #ffdd76;
         border-radius: 20px;
+    }
+    
+    .extra_info h1,.extra_info p {
+        margin-top: 1rem;        
+        background-color: #ffd413;
+        font-size: 22px;
     }
     .misc {
         display: flex;
@@ -430,7 +743,140 @@ footer {
         justify-content: space-between;
         width: 60%; 
     }
+
+    /* INLOGGEN MEDEWERKERS */
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+    }
+    .box{
+        background-color: #ffdd76;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 25px;
+        border-radius: 20px;
+        box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                    0 32px 64px -48px rgba(0, 0, 0, 0.9);
+    }
+    .form-box{
+        width: 550px;
+        margin: 0 10px;
+    }
+    .form-box p{
+        font-size: 30px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #000;
+        margin-bottom: 10px;
+        background-color: #ffdd76;
+    }
+    .form-box form .field{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+        background-color: #ffdd76;
+    }
+    .form-box form .input input{
+        height: 40px;
+        width: 100%;
+        font-size: 17px;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        outline: none;
+        background: #ffdeb4;
+    }
+    .form-box form .field label {
+        background-color: #ffdd76;
+    }
+    .btn{
+        height: 35px;
+        background: #ffaf68;
+        border: 1px solid #000;
+        border-radius: 5px;
+        color: #000;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all .5s;
+        margin-top: 10px;
+        padding: 0px 10px;
+    }
+    .btn:hover{
+        opacity: 0.82;
+    }
+    .submit{
+        width: 100%;
+    }
+    .links{
+        background-color: #ffdd76;
+    }
+    .links a{
+        background-color: #ffdd76;
+    }
+    /* home pagina voor medewerkers */
+
+    .nav{
+        background: #000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        line-height: 60px;
+        z-index: 100;
+    }
+    .logo{
+        background: #000;
+    }
+    .right-links{
+        background-color: #000;
+    }
+    .right-links a{
+        background-color: #000;
+        padding: 0 10px;
+    }
+    .main_medewerkers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        width: 100%;
+    }
     
+    .main-box {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+    
+    .main-box .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .bottom {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .profiel-box {
+        background-color: #ffdd76;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        height: 10vh;
+        flex: 1;
+        min-width: 250px;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    .profiel-box p, .profiel-box b, .bottom p, .bottom b{
+        background-color: #ffdd76;
+    }
 }
 
 /* FILMS PAGINA */
