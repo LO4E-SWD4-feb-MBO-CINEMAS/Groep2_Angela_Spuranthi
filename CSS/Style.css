@@ -448,3 +448,32 @@ footer {
     color: #333;
     font-family: Arial, sans-serif;
 }
+
+/* films genre gedeelte */
+
+.genre-select {
+    font-size: 20px;
+    text-align: center;
+    padding: 12px 10px; 
+    width: 260px; 
+    height: 50px; 
+    border: 2px solid #ffd413;
+    border-radius: 5px;
+    background-color: #ffd413;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10vh;
+    font-family: "Asap Condensed", sans-serif;
+}
+
+
+.genre-select option {
+    background-color: #ffd413;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
