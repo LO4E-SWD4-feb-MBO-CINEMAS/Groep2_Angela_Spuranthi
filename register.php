@@ -1,3 +1,19 @@
+<?php
+if(isset($_POST['submit'])){
+    //verbinden met db
+    $host = "localhost";
+    $dbname = "mbo_cinema";
+    $username = "root";
+    $password = "";
+
+    // insert met alles gegevens in database
+    $sql = "INSERT INTO users (username, email, leeftijd, password)
+            VALUES ('$user', '$email', $leeftijd, '$password')";
+    
+    
+}
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
