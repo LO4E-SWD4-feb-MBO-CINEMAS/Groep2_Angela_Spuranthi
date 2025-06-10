@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informatie MBO CINEMA'S</title>
-    <meta name="description" content="Blijf op de hoogte van de nieuwste films, trailers, recensies en bioscoopnieuws. Alles over films op één plek.">
+    <meta name="description" content="Als u meer wilt weten over MBOcinema, onze openingstijden, contactgegevens of andere informatie, dan bent u hier aan het juiste adres.">
+    <meta name="keywords" content="MBOcinema, informatie, contact, openingstijden, films, bioscoop">
     <meta name="author" content="Spuranthi Srirangam">
     <link rel="stylesheet" href="CSS/Style.css">
     <script src="JS/social_buttons.js" defer></script>
