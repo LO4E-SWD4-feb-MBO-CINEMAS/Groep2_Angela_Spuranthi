@@ -7,7 +7,6 @@
 
 <header class="header_2">
     <img class="logo_img" src="Images/MBO-cinema-logo.png" alt="logo mbo cinema's"> 
-    <!-- <div class="hamburger" onclick="toggleMenu()">☰</div> -->
     <ul class="menu" id="mobileMenu">
         <li><a href="#">Films</a></li>
         <li><a href="#">Bioscopen</a></li>
