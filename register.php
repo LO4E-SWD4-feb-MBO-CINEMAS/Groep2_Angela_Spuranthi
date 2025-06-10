@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
     <p></P>
     <article class="container">
       <article class="box form-box">
-        <p>Aanmeldkuhfwkjbfrwkebfen</p>
+        <p>Aanmelden</p>
         <form action="" method="post">
             <article class="field input">
                 <label for="username">Username</label>
