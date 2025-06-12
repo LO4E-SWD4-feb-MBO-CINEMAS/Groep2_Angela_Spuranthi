@@ -29,6 +29,8 @@
     <input type="text" class="search-bar" placeholder="Zoek een film...">
 </article>
 
+<a href="formulier-reserveren.php" class="reserveren-knop">Reserveren</a>
+
 
 <section class="genre-labels">
 
