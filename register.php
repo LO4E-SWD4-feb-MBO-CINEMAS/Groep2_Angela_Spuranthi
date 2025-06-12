@@ -31,6 +31,7 @@ if(isset($_POST['submit'])){
 
 <body>
 <main>
+    <p></P>
     <article class="container">
       <article class="box form-box">
         <p>Aanmelden</p>
