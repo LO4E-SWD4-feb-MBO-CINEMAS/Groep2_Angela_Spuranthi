@@ -1,18 +1,19 @@
 <?php
-if(isset($_POST['submit'])){
-    //verbinden met db
-    $host = "localhost";
-    $dbname = "mbo_cinema";
-    $username = "root";
-    $password = "";
+require_once 'Classes/User.php';
 
-    // insert met alles gegevens in database
-    $sql = "INSERT INTO users (username, email, leeftijd, password)
-            VALUES ('$user', '$email', $leeftijd, '$password')";
-    
-    
+if (isset($_POST['submit'])) {
+    $user = new User();
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $age = (int) $_POST['age'];
+    $password = $_POST['password'];
+
+    if ($user->register($username, $email, $age, $password)) {
+        echo "<p style='color: green;'>Registratie succesvol!</p>";
+    }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="nl">
