@@ -925,6 +925,89 @@ footer {
     font-family: Arial, sans-serif;
 }
 
+
+.genre-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin: 20px 10vh;
+}
+
+.search-bar {
+    font-size: 20px;
+    padding: 12px 10px;
+    width: 550px;
+    height: 50px;
+    border: 2px solid #ffd413;
+    border-radius: 5px;
+    background-color: #ffd413;
+    color: #000000;
+    font-family: "Asap Condensed", sans-serif;
+    margin-bottom: -17px;
+}
+
+.search-bar::placeholder {
+    color: #000000;
+}
+
+/* film teksten */
+
+.genre-labels {
+    position: absolute; 
+    left: 30px;
+    top: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 18vh; 
+}
+
+.genre-labels article {
+    font-family: "Asap Condensed", sans-serif;
+    font-size: 4vh;
+    color: #000;
+    line-height: 1.6; 
+    margin-bottom: 0.5em; 
+}
+
+/* Films rijen */
+
+.genre-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* ruimte tussen genres */
+    padding: 20px;
+}
+
+.genre p {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Rij met filmbeelden binnen Actie */
+.film-row {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Filmafbeeldingen */
+.genre-film-img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.genre-film-img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
 /* films genre gedeelte */
 
 .genre-select {
@@ -944,12 +1027,61 @@ footer {
 }
 
 
+
+
 .genre-select option {
     background-color: #ffd413;
     color: #000000;
     font-size: 20px;
     padding: 10px;
 }
+
+/* bioscopen pagina */
+
+.bioscoop-section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #a20000;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bioscoop-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bioscoop-section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.map-small {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bioscoop-section {
+        padding: 30px 15px;
+    }
+
+    .bioscoop-section h2 {
+        font-size: 1.5em;
+    }
+
+    .map-small {
+        height: 250px;
+    }
+}
+
+
+
+
 
 
 
