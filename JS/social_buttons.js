@@ -34,5 +34,5 @@ buttons.forEach(button =>{
             bg.style.transition = '';
         }, 250);
     });
+    
 });
-
