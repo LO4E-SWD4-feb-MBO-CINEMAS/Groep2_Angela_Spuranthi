@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mederwerkers home pagina</title>
-    <meta name="description" content="Inloggen als medewerker kan op deze pagina! Ook als je nieuw bent kan je een account aanmaken">
+    <meta name="description" content="Nadat je ingelogd bent, kun je hier je profielgegevens bijwerken, zoals je gebruikersnaam, e-mailadres en leeftijd.">
+    <meta name="keywords" content="MBOcinema, profiel, bijwerken, medewerkers, films, bioscopen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Spuranthi Srirangam">
     <link rel="stylesheet" href="CSS/Style.css"> 
 </head>

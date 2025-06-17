@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verander profiel</title>
-    <meta name="description" content="Inloggen als medewerker kan op deze pagina! Ook als je nieuw bent kan je een account aanmaken">
+    <meta name="description" content="Op deze pagina kunt u uw profielgegevens bijwerken, zoals uw gebruikersnaam, e-mailadres en leeftijd.">
     <meta name="author" content="Spuranthi Srirangam">
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
