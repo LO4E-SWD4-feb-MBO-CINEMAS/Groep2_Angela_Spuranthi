@@ -13,7 +13,7 @@
 <body>
   
     <?php include 'header2.php'; ?>
-    <?php include 'Database.php'; ?>
+    <?php include 'Classes/Database.php'; ?>
 
     <article class="films-section">
         <h1>FILMS</h1>
