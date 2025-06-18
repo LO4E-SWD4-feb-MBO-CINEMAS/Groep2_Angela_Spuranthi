@@ -72,7 +72,17 @@
 
         </article>
     </section>
+    
+    <section class="info_2">
+        <h1>Extraatje</h1>
+        <img id="dogImage" src="#" alt="Hond verschijnt hier" width="300">
+        <button id="refreshButton">Nieuwe hond ophalen</button>
+
+        <script type="module" src="./JS/dog_main.js">
+        </script>
         
+    </section>
+    
 
     </main>
 

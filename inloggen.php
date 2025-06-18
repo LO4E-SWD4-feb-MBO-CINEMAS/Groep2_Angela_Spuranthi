@@ -1,3 +1,25 @@
+<?php
+require_once 'Classes/User.php';
+session_start();
+
+if (isset($_POST['submit'])) {
+    $user = new User();
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $loggedInUser = $user->login($username, $password);
+
+    if ($loggedInUser) {
+        $_SESSION['user'] = $loggedInUser['username'];
+        echo "<p style='color: green;'>Welkom, " . htmlspecialchars($loggedInUser['username']) . "!</p>";
+
+    } else {
+        echo "<p style='color: red;'>Ongeldige inloggegevens.</p>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
