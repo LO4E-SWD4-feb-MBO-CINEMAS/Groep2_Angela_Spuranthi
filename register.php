@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         }
 
         if ($user->register($username, $email, $age, $password)) {
-            $success = "Registratie succesvol! Je kunt nu inloggen.";
+            $success = "Registratie succesvol! ᕕ(ᐛ)ᕗ Je kunt nu inloggen.";
             $_POST = [];
         }
     } catch (Exception $e) {
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     <p></P>
     <article class="container">
       <article class="box form-box">
-        <p>Aanmelden</p>
+        <p>Registreren</p>
 
         <?php if ($error): ?>
             <article class="error-message">

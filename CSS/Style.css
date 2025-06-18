@@ -922,6 +922,21 @@ footer {
         margin-top: 10px;
         text-align: center;
     }
+
+    #refreshButton {
+        background-color: #ffaf68;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.7s ease;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    #refreshButton:hover {
+        background-color: #d28a04;
+    }
 }
 
 /* FILMS PAGINA */

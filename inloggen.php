@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $password = $_POST['password'] ?? '';
 
         if (empty($username) || empty($password)) {
-            throw new Exception("Alle velden zijn verplicht.");
+            throw new Exception("ALLE velden moeten worden ingevuld.");
         }
 
         $loggedInUser = $user->login($username, $password);
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
             header('Location: medewerker.php');
             exit();
         } else {
-            $error = "Ongeldige inloggegevens.";
+            $error = "Ongeldige inloggegevens.(ᗒᗣᗕ)՞ Probeer het opnieuw.";
         }
     } catch (Exception $e) {
         $error = $e->getMessage();

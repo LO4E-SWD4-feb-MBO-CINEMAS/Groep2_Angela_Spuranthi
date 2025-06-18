@@ -8,8 +8,9 @@
 <header class="header_2">
     <img class="logo_img" src="Images/MBO-cinema-logo.png" alt="logo mbo cinema's"> 
     <ul class="menu" id="mobileMenu">
-        <li><a href="#">Films</a></li>
-        <li><a href="#">Bioscopen</a></li>
+        <li><a href="Index.php">Home</a></li>
+        <li><a href="films.php">Films</a></li>
+        <li><a href="bioscopen.php">Bioscopen</a></li>
         <li><a href="informatie.php">Informatie</a></li>
         <li><a href="inloggen.php"><i class='bx bx-user-circle'></i></a></li>
     </ul>
