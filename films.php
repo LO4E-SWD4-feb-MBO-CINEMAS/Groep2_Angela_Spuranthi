@@ -7,10 +7,13 @@
     <meta name="description" content="Blijf op de hoogte van de nieuwste films, trailers, recensies en bioscoopnieuws. Alles over films op één plek.">
     <meta name="author" content="Angela Bansie">
     <link rel="stylesheet" href="\Groep2_Angela_Spuranthi\CSS\Style.css">
+    <script src="/Groep2_Angela_Spuranthi/JS/filmposter.js"></script>
+
 </head>
 <body>
   
     <?php include 'header2.php'; ?>
+    <?php include 'Database.php'; ?>
 
     <article class="films-section">
         <h1>FILMS</h1>
@@ -28,6 +31,8 @@
 
     <input type="text" class="search-bar" placeholder="Zoek een film...">
 </article>
+
+<a href="formulier-reserveren.php" class="reserveren-knop">Reserveren</a>
 
 
 <section class="genre-labels">
