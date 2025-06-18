@@ -1,27 +1,39 @@
 <?php
 require_once 'Classes/User.php';
 
-if (isset($_POST['submit'])) {
-    $user = new User();
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $age = (int) $_POST['age'];
-    $password = $_POST['password'];
+$error = '';
+$success = '';
 
-    if ($user->register($username, $email, $age, $password)) {
-        echo "<p style='color: green;'>Registratie succesvol!</p>";
+if (isset($_POST['submit'])) {
+    try {
+        $user = new User();
+        $username = $_POST['username'] ?? '';
+        $email = $_POST['email'] ?? '';
+        $age = (int) ($_POST['age'] ?? 0);
+        $password = $_POST['password'] ?? '';
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        if (empty($username) || empty($email) || empty($password) || $age <= 0) {
+            throw new Exception("Alle velden zijn verplicht.");
+        }
+
+        if ($user->register($username, $email, $age, $password)) {
+            $success = "Registratie succesvol! Je kunt nu inloggen.";
+            $_POST = [];
+        }
+    } catch (Exception $e) {
+        $error = $e->getMessage();
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren medewerkers</title>
-    <meta name="description" content="Inloggen als medewerker kan op deze pagina! Ook als je nieuw bent kan je een account aanmaken">
+    <meta name="description" content="registreer als medewerker om toegang te krijgen tot de medewerkersfunctionaliteiten van MBOcinema.">
+    <meta name="keywords" content="MBOcinema, registratie, medewerkers, films, bioscopen">
     <meta name="author" content="Spuranthi Srirangam">
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
@@ -36,6 +48,20 @@ if (isset($_POST['submit'])) {
     <article class="container">
       <article class="box form-box">
         <p>Aanmelden</p>
+
+        <?php if ($error): ?>
+            <article class="error-message">
+                <?php echo htmlspecialchars($error); ?>
+        </article>
+        <?php endif; ?>
+        <?php if ($success): ?>
+            <article class="success-message">
+                <?php echo htmlspecialchars($success); ?>
+                <br><a href="inloggen.php">Klik hier om in te loggen</a>
+        </article>
+        <?php endif; ?>
+
+
         <form action="" method="post">
             <article class="field input">
                 <label for="username">Username</label>

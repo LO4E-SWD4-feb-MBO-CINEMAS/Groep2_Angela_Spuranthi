@@ -2,19 +2,34 @@
 require_once 'Classes/User.php';
 session_start();
 
+$error = '';
+$success = '';
+
 if (isset($_POST['submit'])) {
-    $user = new User();
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    try {
+        $user = new User();
+        $username = $_POST['username'] ?? '';
+        $password = $_POST['password'] ?? '';
 
-    $loggedInUser = $user->login($username, $password);
+        if (empty($username) || empty($password)) {
+            throw new Exception("Alle velden zijn verplicht.");
+        }
 
-    if ($loggedInUser) {
-        $_SESSION['user'] = $loggedInUser['username'];
-        echo "<p style='color: green;'>Welkom, " . htmlspecialchars($loggedInUser['username']) . "!</p>";
+        $loggedInUser = $user->login($username, $password);
 
-    } else {
-        echo "<p style='color: red;'>Ongeldige inloggegevens.</p>";
+        if ($loggedInUser) {
+            $_SESSION['user_id'] = $loggedInUser['id'];
+            $_SESSION['username'] = $loggedInUser['username'];
+            $_SESSION['email'] = $loggedInUser['email'];
+            $_SESSION['logged_in'] = true;
+            
+            header('Location: medewerker.php');
+            exit();
+        } else {
+            $error = "Ongeldige inloggegevens.";
+        }
+    } catch (Exception $e) {
+        $error = $e->getMessage();
     }
 }
 ?>
@@ -40,6 +55,18 @@ if (isset($_POST['submit'])) {
     <article class="container">
       <article class="box form-box">
         <p>Inloggen</p>
+
+        <?php if ($error): ?>
+            <div class="error-message">
+                <?php echo htmlspecialchars($error); ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($success): ?>
+            <div class="success-message">
+                <?php echo htmlspecialchars($success); ?>
+            </div>
+        <?php endif; ?>
+        
         <form action="" method="post">
             <article class="field input">
                 <label for="username">Username</label>

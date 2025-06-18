@@ -1,15 +1,20 @@
+<!-- Author: Spuranthi -->
+
 <?php
-class Database {
+abstract class Database {
     protected $pdo;
+    protected $host = 'localhost';
+    protected $dbname = 'mbo_cinema';
+    protected $username = 'root';
+    protected $password = '';
+    protected $charset = 'utf8mb4';
 
     public function __construct() {
-        $host = 'localhost';
-        $dbname = 'mbo_cinema';
-        $username = 'root';
-        $password = '';
-        $charset = 'utf8mb4';
+        $this->connect();
+    }
 
-        $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+    protected function connect() {
+        $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}";
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -17,10 +22,18 @@ class Database {
         ];
 
         try {
-            $this->pdo = new PDO($dsn, $username, $password, $options);
+            $this->pdo = new PDO($dsn, $this->username, $this->password, $options);
         } catch (PDOException $e) {
-            die("Database connection failed: " . $e->getMessage());
+            error_log("Database connection failed: " . $e->getMessage());
+            die("Er is een probleem met de database verbinding.");
         }
     }
+
+
+    abstract public function validateData($data);
+
+    protected function sanitizeInput($input) {
+        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+    }
+
 }
-?>

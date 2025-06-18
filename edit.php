@@ -1,3 +1,51 @@
+<!-- Spuranthi-->
+<?php
+require_once 'auth_check.php';
+require_once 'Classes/User.php';
+session_start();
+requireLogin();
+
+$currentUser = getCurrentUser();
+$user = new User();
+$userData = $user->getUserById($currentUser['id']);
+
+$error = '';
+$success = '';
+
+if (!$userData) {
+    session_destroy();
+    header('Location: inloggen.php');
+    exit();
+}
+
+// Verwerk form submission
+if (isset($_POST['submit'])) {
+    try {
+        $newUsername = $_POST['username'] ?? '';
+        $newEmail = $_POST['email'] ?? '';
+        $newAge = (int) ($_POST['age'] ?? 0);
+
+        // Basis validatie
+        if (empty($newUsername) || empty($newEmail) || $newAge <= 0) {
+            throw new Exception("Alle velden zijn verplicht.");
+        }
+
+        // Update gebruiker
+        if ($user->updateUser($currentUser['id'], $newUsername, $newEmail, $newAge)) {
+            // Update session data
+            $_SESSION['username'] = $newUsername;
+            $_SESSION['email'] = $newEmail;
+            
+            // Herlaad gebruikersdata
+            $userData = $user->getUserById($currentUser['id']);
+            $success = "Profiel succesvol bijgewerkt!";
+        }
+    } catch (Exception $e) {
+        $error = $e->getMessage();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -25,6 +73,19 @@
     <article class="container">
         <article class="box form-box">
         <p>Verander profiel</p>
+
+        <?php if ($error): ?>
+            <article class="error-message">
+                <?php echo htmlspecialchars($error); ?>
+        </article>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+            <article class="success-message">
+                <?php echo htmlspecialchars($success); ?>
+        </article>
+        <?php endif; ?>
+
         <form action="" method="post">
             <article class="field input">
                 <label for="username">Username</label>

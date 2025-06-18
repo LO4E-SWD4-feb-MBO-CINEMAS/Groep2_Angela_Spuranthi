@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+require_once 'Classes/User.php';
+require_once 'auth_check.php';
+
+requireLogin();
+$user = getCurrentUser();
+
+if (!$userData) {
+    session_destroy();
+    header('Location: inloggen.php');
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -28,14 +46,14 @@
     <article class="main-box top">
         <article class="top">
             <article class="profiel-box">
-                <p>Hey <b>Spuranthi</b>, welkom!</p>
+                <p>Hey <b><?php echo htmlspecialchars($userData['username']); ?></b>, welkom!</p>
             </article>
             <article class="profiel-box">
-                <p>Jouw email is <b>Spuranthi.srirangam@gmail.com</b>.</p>
+                <p>Jouw email is <b><?php echo htmlspecialchars($userData['email']); ?></b>.</p>
             </article>
             <article class="bottom">
                 <article class="box">
-                    <p>En jij bent <b>19 jaar oud</b>.</p>
+                    <p>En jij bent <b><?php echo htmlspecialchars($userData['leeftijd']); ?> jaar oud</b>.</p>
                 </article>
             </article>
         </article>

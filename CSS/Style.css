@@ -907,6 +907,21 @@ footer {
     .profiel-box p, .profiel-box b, .bottom p, .bottom b{
         background-color: #ffdd76;
     }
+
+    .error-message {
+        color: red;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+        background-color: #ffdd76;
+    }
+
+    .success-message {
+        color: green;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+    }
 }
 
 /* FILMS PAGINA */
