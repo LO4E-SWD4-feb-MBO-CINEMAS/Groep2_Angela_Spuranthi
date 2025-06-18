@@ -1108,6 +1108,17 @@ footer {
   background-color: #b17301;
 }
 
+/* eventlist js */
+
+.genre-film-img {
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.genre-film-img:hover {
+    border: 3px solid black;
+}
+
 
 
 
