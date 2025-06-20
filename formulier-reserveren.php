@@ -1,5 +1,5 @@
 <?php
-require_once 'Classes/Databasefilms.php';
+require_once 'Classes/Databasefilms.php'; 
 
 $database = new DatabaseConnection();
 $pdo = $database->getPDO();
@@ -7,13 +7,13 @@ $pdo = $database->getPDO();
 $message = '';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Ruwe input ophalen
-    $naam  = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $film  = $_POST['film'] ?? '';
+
+    $naam  = $database->validateData($_POST['name'] ?? '');
+    $email = $database->validateData($_POST['email'] ?? '');
+    $film  = $database->validateData($_POST['film'] ?? '');
 
     try {
-        // SQL uitvoeren
+
         $sql = "INSERT INTO reserveringen (naam, email, film) VALUES (:naam, :email, :film)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
@@ -22,18 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             ':film'  => $film
         ]);
 
-        // Data ontsmetten vóór tonen (XSS preventie)
-        $safeNaam = htmlspecialchars($naam, ENT_QUOTES, 'UTF-8');
-        $safeFilm = htmlspecialchars($film, ENT_QUOTES, 'UTF-8');
 
-        $message = "<p style='color:green;'>Reservering succesvol opgeslagen voor <strong>$safeNaam</strong> (film: <em>$safeFilm</em>)!</p>";
+        $message = "<p style='color:green;'>Reservering succesvol opgeslagen voor <strong>$naam</strong> (film: <em>$film</em>)!</p>";
     } catch (PDOException $e) {
-        // Ook foutmelding ontsmetten voor veiligheid
         $safeError = htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8');
         $message = "<p style='color:red;'>Fout bij opslaan: $safeError</p>";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="nl">

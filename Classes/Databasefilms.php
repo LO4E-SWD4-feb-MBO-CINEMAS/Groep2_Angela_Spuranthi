@@ -1,4 +1,5 @@
 <?php
+
 require_once 'Database.php';
 
 class DatabaseConnection extends Database {
@@ -6,7 +7,8 @@ class DatabaseConnection extends Database {
         return $this->pdo;
     }
 
+
     public function validateData($data) {
-        return $data;
+        return $this->sanitizeInput($data);
     }
 }
