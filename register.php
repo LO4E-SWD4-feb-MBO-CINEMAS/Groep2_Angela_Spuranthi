@@ -11,7 +11,6 @@ if (isset($_POST['submit'])) {
         $email = $_POST['email'] ?? '';
         $age = (int) ($_POST['age'] ?? 0);
         $password = $_POST['password'] ?? '';
-        $password = password_hash($password, PASSWORD_DEFAULT);
 
         if (empty($username) || empty($email) || empty($password) || $age <= 0) {
             throw new Exception("Alle velden zijn verplicht.");

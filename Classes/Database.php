@@ -33,7 +33,7 @@ abstract class Database {
     abstract public function validateData($data);
 
     protected function sanitizeInput($input) {
-        return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
+        return htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
     }
 
 }

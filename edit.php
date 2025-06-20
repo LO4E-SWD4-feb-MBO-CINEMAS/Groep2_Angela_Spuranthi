@@ -18,25 +18,22 @@ if (!$userData) {
     exit();
 }
 
-// Verwerk form submission
+
 if (isset($_POST['submit'])) {
     try {
         $newUsername = $_POST['username'] ?? '';
         $newEmail = $_POST['email'] ?? '';
         $newAge = (int) ($_POST['age'] ?? 0);
 
-        // Basis validatie
+
         if (empty($newUsername) || empty($newEmail) || $newAge <= 0) {
             throw new Exception("Alle velden zijn verplicht.");
         }
-
-        // Update gebruiker
+        
         if ($user->updateUser($currentUser['id'], $newUsername, $newEmail, $newAge)) {
-            // Update session data
             $_SESSION['username'] = $newUsername;
             $_SESSION['email'] = $newEmail;
-            
-            // Herlaad gebruikersdata
+            $_SESSION['leeftijd'] = $newAge;
             $userData = $user->getUserById($currentUser['id']);
             $success = "Profiel succesvol bijgewerkt!";
         }

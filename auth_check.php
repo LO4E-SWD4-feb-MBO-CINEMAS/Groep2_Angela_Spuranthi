@@ -1,6 +1,5 @@
 <!-- Spuranthi -->
 <?php
-session_start();
 
 function isLoggedIn() {
     return isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
@@ -21,7 +20,8 @@ function getCurrentUser() {
     return [
         'id' => $_SESSION['user_id'] ?? null,
         'username' => $_SESSION['username'] ?? null,
-        'email' => $_SESSION['email'] ?? null
+        'email' => $_SESSION['email'] ?? null,
+        'leeftijd' => $_SESSION['leeftijd'] ?? null,
     ];
 }
 
