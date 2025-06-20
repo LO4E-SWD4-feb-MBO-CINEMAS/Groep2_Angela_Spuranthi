@@ -74,9 +74,9 @@
     </section>
     
     <section class="info_2">
-        <h1>Extraatje</h1>
+        <h1>Voel je je een tikkeltje down na al die info? Geen paniek, we hebben een vrolijke verrassing voor je!</h1>
         <img id="dogImage" src="#" alt="Hond verschijnt hier" width="300">
-        <button id="refreshButton">Nieuwe hond ophalen</button>
+        <button id="refreshButton">Surprise me (• ε •)</button>
 
         <script type="module" src="./JS/dog_main.js">
         </script>

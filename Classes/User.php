@@ -34,7 +34,7 @@ class User extends Database {
 
     public function register($username, $email, $age, $password) {
         try {
-            // Input sanitization TEGEN XSS en SQL injectie preventie
+            //TEGEN XSS en SQL injectie preventie
             $username = $this->sanitizeInput($username);
             $email = $this->sanitizeInput($email);
             $age = (int) $age;
